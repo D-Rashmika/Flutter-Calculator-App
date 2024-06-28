@@ -65,3 +65,72 @@ Widget buildButton(String buttonText, Color color, {Color textColor = Colors.bla
     );
   }
 
+ @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 2,
+            child: Container(
+              color: Colors.grey.shade900,
+              alignment: Alignment.centerRight,
+              padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
+              child: Text(
+                _output,
+                style: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Column(
+              children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    buildButton("AC", Colors.green, textColor: Colors.white),
+                    buildButton("(", Colors.green, textColor: Colors.white),
+                    buildButton(")", Colors.green, textColor: Colors.white),
+                    buildButton("/", Colors.green, textColor: Colors.white),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    buildButton("7", Colors.pink.shade200),
+                    buildButton("8", Colors.pink.shade200),
+                    buildButton("9", Colors.pink.shade200),
+                    buildButton("*", Colors.green, textColor: Colors.white),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    buildButton("4", Colors.pink.shade200),
+                    buildButton("5", Colors.pink.shade200),
+                    buildButton("6", Colors.pink.shade200),
+                    buildButton("-", Colors.green, textColor: Colors.white),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    buildButton("1", Colors.pink.shade200),
+                    buildButton("2", Colors.pink.shade200),
+                    buildButton("3", Colors.pink.shade200),
+                    buildButton("+", Colors.green, textColor: Colors.white),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    buildButton("0", Colors.pink.shade200),
+                    buildButton(".", Colors.pink.shade200),
+                    buildButton("⌫", Colors.pink.shade200),
+                    buildButton("=", Colors.green, textColor: Colors.white),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
