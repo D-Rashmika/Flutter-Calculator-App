@@ -78,7 +78,7 @@ Widget buildButton(String buttonText, Color color, {Color textColor = Colors.bla
               padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
               child: Text(
                 _output,
-                style: TextStyle(fontSize: 48.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold),
               ),
             ),
           ),
