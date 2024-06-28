@@ -48,3 +48,20 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     }
   }
 
+Widget buildButton(String buttonText, Color color, {Color textColor = Colors.black}) {
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.all(1.0),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: color,
+            padding: EdgeInsets.all(24.0),
+            textStyle: TextStyle(fontSize: 24.0),
+          ),
+          onPressed: () => buttonPressed(buttonText),
+          child: Text(buttonText, style: TextStyle(color: textColor)),
+        ),
+      ),
+    );
+  }
+
